@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+  padding:0;
+  margin:0;
+}
+
+body{
+  background-color:tan;
+}
+
+#pencet{
+  display:flex;
+  align-items:center;
+  margin-top:50vh;
+  flex-direction:column;
+  cursor:pointer;
+}
+
+#pencet span{
+  background-color:ghostwhite;
+  width:2em;
+  height:.2em;
+  margin:0.26em 0;
+  display:block;
+  transition: all .4s ease;
+  transform-origin:0 0;
+}
+
+.Diam span:nth-child(1) {
+  transform: rotate(45deg) translate(1px, -1px);
+}
+
+.Diam span:nth-child(2) {
+  Transform: scaleX(0);
+}
+
+.Diam span:nth-child(3) {
+  transform: rotate(-45deg) translate(1px, 0);
+}
+</style>
+<body>
+    <div id="menu">
+        <div id="pencet">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+</body>
+
+<script>
+    const clickx= document.getElementById('pencet');
+
+clickx.addEventListener('click', function(){
+  clickx.classList.toggle('Diam');
+});
+
+</script>
+</html>

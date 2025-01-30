@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-Up Timer Example</title>
+    <style>
+        /* Style for the pop-up */
+        #popup {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        #overlay {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <!-- Overlay and Pop-up HTML -->
+    <div id="overlay"></div>
+    <div id="popup">
+        <h2>Welcome to the Demo!</h2>
+        <p>Thank you for taking the time to review this demo. Please note the following:</p>
+        <ul>
+            <li><strong>Content:</strong> Placeholder text (lorem ipsum) is used; final content will be added.</li>
+            <li><strong>Images:</strong> Demo images are temporary and will be replaced.</li>
+            <li><strong>Responsiveness:</strong> Best viewed on a larger screen or desktop.</li>
+            <li><strong>Feedback:</strong> Share your thoughts and suggestions with us.</li>
+            <li><strong>Next Steps:</strong> We'll discuss any changes after your review.</li>
+        </ul>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        // Function to show the pop-up
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        // Function to close the pop-up
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        // Show the pop-up after 5 seconds
+        setTimeout(showPopup, 5000);
+    </script>
+</body>
+</html>

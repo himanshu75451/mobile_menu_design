@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar - All In One!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="asset/style/style-nav-bar.css">
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <div class="left-side-header">
+                <a href="#">FAQ</a>
+                <a href="#">Resources</a>
+                <a href="#">Location</a>
+            </div>
+            <div class="social-section">
+                <a href="#">Sign In</a>
+                <div class="social-media">
+                    <a href="#"><img src="asset/images/linkedin.svg" alt=""></a>
+                    <a href="#"><img src="asset/images/facebook.svg" alt=""></a>
+                    <a href="#"><img src="asset/images/twitter.svg" alt=""></a>
+                    <a href="#"><img src="asset/images/instagram.svg" alt=""></a>
+                    <a href="#"><img src="asset/images/youtube.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <nav id="navbar" class="nav-bar">
+            <div>
+                <a href="#"><img src="asset/images/6319f363361ab5e88c48b4fd_logo_vividworks.svg" alt="" class="img-fluid logo-img"></a>
+            </div>
+            <div>
+                <ul class="menu">
+                    <li class="dropdown-megamenu  megamenu-open"><a href="#">Products <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="mega-menu">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-12">
+                                    <div class="mega-menu-content contentBox1">
+                                        <h6>PRODUCTS</h6>
+                                        <div class="content-items">
+                                            <img src="asset/images/3dcube_bulk.svg" alt="">
+                                            <div>
+                                                <a href="#">3D Product Configurator</a>
+                                                <p class="megamenu-subline">Bring your products to life</p>
+                                            </div>
+                                        </div>
+                                        <div class="content-items">
+                                            <img src="asset/images/3dcube_bulk.svg" alt="">
+                                            <div>
+                                                <a href="#">3D Product Configurator</a>
+                                                <p class="megamenu-subline">Bring your products to life</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="mega-menu-content contentBox2">
+                                        <h6>INDUSTRIES</h6>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="content-items">
+                                                    <div>
+                                                        <a href="#">Retail & eCommerce</a>
+                                                        <p class="megamenu-subline">Convert traffic into sales in minutes</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="content-items">
+                                                    <div>
+                                                        <a href="#">3D Product Configurator</a>
+                                                        <p class="megamenu-subline">Bring your products to life</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="content-items">
+                                                    <div>
+                                                        <a href="#">Furniture</a>
+                                                        <p class="megamenu-subline">Create a shopping experience that converts</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="content-items">
+                                                    <div>
+                                                        <a href="#">3D Product Configurator</a>
+                                                        <p class="megamenu-subline">Bring your products to life</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="content-items">
+                                                    <div>
+                                                        <a href="#">Retail & eCommerce</a>
+                                                        <p class="megamenu-subline">Convert traffic into sales in minutes</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-12">
+                                    <div class="mega-menu-content contentBox3">
+                                        <h6>INTEGRATIONS</h6>
+                                        <div class="content-items">
+                                            <div>
+                                                <a href="#">WooCommerce</a>
+                                                <p class="megamenu-subline">WooCommerce Plugin</p>
+                                            </div>
+                                        </div>
+                                        <div class="content-items">
+                                            <div>
+                                                <a href="#">Shopify</a>
+                                                <p class="megamenu-subline">Shopify Plugin</p>
+                                            </div>
+                                        </div>
+                                        <div class="content-items">
+                                            <div>
+                                                <a href="#">Magento</a>
+                                                <p class="megamenu-subline">Adobe Commerce Plugin</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">ShowCase</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li> <a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="gobal-section">
+                <a href="#"><i class="fa-solid fa-globe"></i></a>
+                <a class="button" href="#">Talk to Sales</a>
+                <svg class="ham hamRotate ham1 toogle-bar toogle-close" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                    <path class="line top"
+                        d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+                    <path class="line middle" d="m 30,50 h 40" />
+                    <path class="line bottom"
+                        d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+                </svg>
+            </div>
+        </nav>
+    </header>
+    <section class="banner">
+        <!-- <div class="mega-menu">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="mega-menu-content contentBox1">
+                        <h6>PRODUCTS</h6>
+                        <div class="content-items">
+                            <img src="asset/images/3dcube_bulk.svg" alt="">
+                            <div>
+                                <a href="#">3D Product Configurator</a>
+                                <p class="megamenu-subline">Bring your products to life</p>
+                            </div>
+                        </div>
+                        <div class="content-items">
+                            <img src="asset/images/3dcube_bulk.svg" alt="">
+                            <div>
+                                <a href="#">3D Product Configurator</a>
+                                <p class="megamenu-subline">Bring your products to life</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mega-menu-content contentBox2">
+                        <h6>INDUSTRIES</h6>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="content-items">
+                                    <div>
+                                        <a href="#">Retail & eCommerce</a>
+                                        <p class="megamenu-subline">Convert traffic into sales in minutes</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="content-items">
+                                    <div>
+                                        <a href="#">3D Product Configurator</a>
+                                        <p class="megamenu-subline">Bring your products to life</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="content-items">
+                                    <div>
+                                        <a href="#">Furniture</a>
+                                        <p class="megamenu-subline">Create a shopping experience that converts</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="content-items">
+                                    <div>
+                                        <a href="#">3D Product Configurator</a>
+                                        <p class="megamenu-subline">Bring your products to life</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="content-items">
+                                    <div>
+                                        <a href="#">Retail & eCommerce</a>
+                                        <p class="megamenu-subline">Convert traffic into sales in minutes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="mega-menu-content contentBox3">
+                        <h6>INTEGRATIONS</h6>
+                        <div class="content-items">
+                            <div>
+                                <a href="#">WooCommerce</a>
+                                <p class="megamenu-subline">WooCommerce Plugin</p>
+                            </div>
+                        </div>
+                        <div class="content-items">
+                            <div>
+                                <a href="#">Shopify</a>
+                                <p class="megamenu-subline">Shopify Plugin</p>
+                            </div>
+                        </div>
+                        <div class="content-items">
+                            <div>
+                                <a href="#">Magento</a>
+                                <p class="megamenu-subline">Adobe Commerce Plugin</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="banner-content">
+                <h1>3D Visualization Software for Commerce</h1>
+                <p>Empower customers to visually customize and order your products online</p>
+                <div class="btu-section">
+                    <a class="button button-org" href="#">Book a Demo</a>
+                    <a class="button button-border" href="#">Get a Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="section-content">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <img src="asset/images/webflw-images.svg" alt="" class="img-fluid">
+                        <div class="text-img-content">
+                            <img class="text-img" src="asset/images/circle-text.svg" alt="">
+                            <img class="design-now" src="asset/images/design-now.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="content-data">
+                            <h1>Offer instant product customization</h1>
+                            <p class="desc">Inspire your customers with interactive real-time product customization.</p>
+                            <p class="desc">Offer realistic product visualization, incl. shapes, colors, materials, and accessories, for an in-store-like experience.</p>
+                            <p class="desc">Enable customers to explore your product catalog in immersive 3D: rotate 360°, zoom, and view in 4K resolution.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hover-task-section">
+        <div class="container">
+            <div class="row hover-task">
+                <div class="col-lg-4 col-md-6">
+                    <div class="hover-task-content">
+                        <div>
+                            <i class="fa-brands fa-react"></i>
+                        </div>
+                        <h3>Offer instant product</h3>
+                        <p class="desc">Offer realistic product visualization, incl. shapes, colors, materials, and accessories, for an in-store-like experience.</p>
+                        <a class="button" href="#"> Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="color-div"></div>
+                        <div class="animation-bolb bolb-rotation bolb-1"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="hover-task-content">
+                        <div>
+                            <i class="fa-solid fa-shapes"></i>
+                        </div>
+                        <h3>Offer instant product</h3>
+                        <p class="desc">Offer realistic product visualization, incl. shapes, colors, materials, and accessories, for an in-store-like experience.</p>
+                        <a class="button" href="#"> Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="color-div"></div>
+                        <div class="animation-bolb bolb-rotation bolb-1"></div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="hover-task-content">
+                        <div>
+                            <i class="fa-solid fa-cubes-stacked"></i>
+                        </div>
+                        <h3>Offer instant product</h3>
+                        <p class="desc">Offer realistic product visualization, incl. shapes, colors, materials, and accessories, for an in-store-like experience.</p>
+                        <a class="button" href="#"> Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="color-div"></div>
+                        <div class="animation-bolb bolb-rotation bolb-1"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <div class="cursor"></div>
+
+    <div class="social">
+        <a href="#">
+            <div class="social-button color-telegram">
+                <div class="icons8-telegram-app"></div>
+                <p class="order-1 google-font margin-telgram">Linkedin</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="social-button color-instagram">
+                <div class="icons8-instagram"></div>
+                <p class="order-1 google-font margin-instagram">Instagram</p>
+            </div>
+        </a>
+        <!-- <a href="#">
+            <div class="social-button color-whatsapp">
+                <div class="icons8-whatsapp"></div>
+                <p class="order-1 google-font margin-instagram">Whatsapp</p>
+            </div>
+        </a> -->
+    </div>
+
+    <a href="" class="btn-whatsapp-pulse">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+
+    <!-- Back to top button -->
+    <a id="back-to-top-button"></a>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+<script>
+    //Toggle Menu
+$(".toogle-bar").click(function () {
+  $(".toogle-close").toggleClass("closeMenu");
+  $(".menu").toggleClass("show-menu");
+});
+
+
+$(".megamenu-open").click(function () {
+  $(".mega-menu").toggleClass("show-mega-menu");
+});
+
+
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+    } else {
+    navbar.classList.remove("sticky");
+    }
+};
+
+
+
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+    cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
+});
+
+document.addEventListener('click', e => {
+    cursor.classList.add("expand");
+    setTimeout(() => {
+        cursor.classList.remove("expand");
+    }, 500);
+});
+
+
+
+var btn = $('#back-to-top-button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
+</script>
+</html>
+
+
+<!-- https://www.vividworks.com/ -->
+
+<!-- https://nav-bar-task.netlify.app/ -->
+
+<!-- https://vividworks-task.netlify.app/ -->

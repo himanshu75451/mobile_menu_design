@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+</head>
+<style>
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.4;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  max-width: 68rem;
+  width: 100%;
+}
+
+.main {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    border-radius: 2px;
+
+    &-image {
+    
+      display: block;
+      padding-top: 70%;
+      position: relative;
+      width: 100%;
+
+      img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+    }
+  }
+} */
+ .container{
+    width: 90%;
+    margin: auto;
+    padding: 100px 0px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat( 4, 1fr);
+ }
+img{
+    width: 100%;
+}
+
+
+
+
+
+
+.cssbuttons-io {
+  position: relative;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  border-radius: 0.8em;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: ghostwhite;
+  overflow: hidden;
+  left: 50%;
+  margin-bottom: 100px;
+}
+
+.cssbuttons-io svg {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.5em;
+}
+
+.cssbuttons-io span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8em 1.2em 0.8em 1.05em;
+}
+
+.cssbuttons-io::before,
+.cssbuttons-io::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.cssbuttons-io::before {
+  content: "";
+  background: #000;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.cssbuttons-io:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+.cssbuttons-io:active {
+  transform: scale(0.95);
+}
+.card{
+  position: relative;
+  z-index: 2;
+  margin-top: 25px;
+}
+.card-image {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.card-image::before{
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 1;
+  display: block;
+  content: "";
+  width: 20%;
+  height: 100%;
+  transform: skewX(-25deg);
+  background: #ffffff;
+  opacity: 0.2;
+}
+/* .card-image::before{
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.3)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  -webkit-transform: skewX(-25deg);
+  -ms-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+} */
+.card:hover .card-image:before{
+  animation: animation 0.95s;
+}
+/* .card:hover .card-image:before{
+  -webkit-animation: animation 1.2s;
+  animation: animation 1.2s;
+} */
+.card-image a img{
+  transition: all 1.5s cubic-bezier(0, 0, 0.2, 1);
+  transform: scale(1.02);
+}
+.card-image a img:hover{
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+@keyframes animation{
+  100% {
+    left: 125%;
+  }
+}
+</style>
+
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="card">
+                <div class="card-image">
+                    <a href="https://bit.ly/34MdBRc" data-fancybox="gallery" data-caption="Caption Images 1">
+                        <img src="https://bit.ly/34MdBRc" alt="Image Gallery">
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <a href="https://bit.ly/2Nv9zHh" data-fancybox="gallery" data-caption="Caption Images 1">
+                        <img src="https://bit.ly/2Nv9zHh" alt="Image Gallery">
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <a href="https://bit.ly/2q0iuay" data-fancybox="gallery" data-caption="Caption Images 1">
+                        <img src="https://bit.ly/2q0iuay" alt="Image Gallery">
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <a href="https://bit.ly/34PEofp" data-fancybox="gallery" data-caption="Caption Images 1">
+                        <img src="https://bit.ly/34PEofp" alt="Image Gallery">
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <a href="https://bit.ly/2X4z711" data-fancybox="gallery" data-caption="Caption Images 1">
+                        <img src="https://bit.ly/2X4z711" alt="Image Gallery">
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <a href="https://bit.ly/2rtIqMl" data-fancybox="gallery" data-caption="Caption Images 1">
+                        <img src="https://bit.ly/2rtIqMl" alt="Image Gallery">
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <a href="https://bit.ly/33xTVAn" data-fancybox="gallery" data-caption="Caption Images 1">
+                        <img src="https://bit.ly/33xTVAn" alt="Image Gallery">
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <a href="https://bit.ly/2K3jaDa" data-fancybox="gallery" data-caption="Caption Images 1">
+                        <img src="https://bit.ly/2K3jaDa" alt="Image Gallery">
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <a href="https://bit.ly/2WZ3fe2" data-fancybox="gallery" data-caption="Caption Images 1">
+                        <img src="https://bit.ly/2WZ3fe2" alt="Image Gallery">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <button class="cssbuttons-io">
+        <span
+          ><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+              fill="currentColor"
+            ></path>
+          </svg>
+          Code</span
+        >
+      </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"> </script>
+    
+    <script>
+        $('[data-fancybox="gallery"]').fancybox({
+            buttons: [
+                "slideShow",
+                "thumbs",
+                "zoom",
+                "fullScreen",
+                "share",
+                "close"
+            ],
+            loop: false,
+            protect: true
+        });
+    </script>
+
+</body>
+
+
+</html>

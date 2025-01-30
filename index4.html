@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    html{
+	box-sizing: border-box;
+}
+
+*, *:after,*:before{
+	box-sizing: border-box;
+}
+
+:root {
+  --color: #1950FF;
+  --white: #fff;
+}
+
+body {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.device {
+  position: relative;
+  width: 300px;
+  height: 600px;
+  background: #FFF;
+  border: 1px solid #EEE;
+  border-radius: 30px;
+  box-shadow: 0 0 0 10px rgba(0,0,0,.1);
+}
+
+.container {
+  position: absolute;
+  top: 0; right: 0;
+  bottom: 0; left: 0;
+  overflow: hidden;
+  border-radius: 30px;
+  background: linear-gradient(to bottom, #eee, #ddd);
+}
+
+.navTrigger {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: 0;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-appearence: none;
+  -webkit-tap-highlight-color: transparent;
+  &:focus {
+    outline: none;
+  }
+  svg {
+    width: 64px;
+    height: 48px;
+    top: -6px;
+    left: -14px;
+    stroke: var(--color);
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    display: block;
+    position: absolute;
+    path {
+      transition: stroke-dasharray var(--duration, .85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, .85s) var(--easing, ease) var(--delay, 0s);
+      stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+      stroke-dashoffset: var(--offset, 126px);
+      transform: translateZ(0);
+      &:nth-child(2) {
+        --duration: .7s;
+        --easing: ease-in;
+        --offset: 100px;
+        --array-2: 74px;
+      }
+      &:nth-child(3) {
+        --offset: 133px;
+        --array-2: 107px;
+      }
+    }
+  }
+  &.active {
+    svg {
+      stroke: var(--white);
+      path {
+        --offset: 57px;
+        &:nth-child(1),
+        &:nth-child(3) {
+          --delay: .15s;
+          --easing: cubic-bezier(.2, .4, .2, 1.1);
+        }
+        &:nth-child(2) {
+          --duration: .4s;
+          --offset: 2px;
+          --array-1: 1px;
+        }
+        &:nth-child(3) {
+          --offset: 58px;
+        }
+      }
+    }
+  }
+}
+
+.navMenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background: #FFF;
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  transition: all .375s;
+  &.active {
+    opacity: 1;
+    z-index: 100;
+    visibility: visible;
+    &::before {
+      transform: skew(-14deg) translateX(0);
+    }
+    li {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -15px;
+    background: #1950FF;
+    transform-origin: 0 0;
+    transform: skew(-14deg) translateX(-120%);
+    transition: all .275s .1s;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    flex-direction: column;
+    height: 93%; /* Should be 100%, but we have a notice message :D */
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateX(-18%) skew(-16deg);
+    li {
+      display: block;
+      margin: .5rem 0;
+      text-align: right;
+      opacity: 0;
+      transform: translateY(-10px);
+      a {
+        position: relative;
+        left: 0;
+        display: block;
+        padding: 12px 0;
+        color: var(--white);
+        font-size: 1.4em;
+        text-decoration: none;
+        transform: skew(16deg);
+        transition: .25s;
+        &:hover {
+          left: 10px;
+        }
+      }
+      &:nth-child(1) {
+        transition: all 275ms 275ms;
+      }
+      &:nth-child(2) {
+        transition: all 275ms 325ms;
+      }
+      &:nth-child(3) {
+        transition: all 275ms 375ms;
+      }
+      &:nth-child(4) {
+        transition: all 275ms 425ms;
+      }
+      &:nth-child(5) {
+        transition: all 275ms 475ms;
+      }
+    }
+  }
+}
+
+</style>
+
+<body>
+
+    <div class="device">
+        <div class="container">
+            <button class="navTrigger active" id="navTrigger">
+                <svg viewBox="0 0 64 48">
+                    <path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
+                    <path d="M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24"></path>
+                    <path d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
+                </svg>
+            </button>
+            <nav class="navMenu active" id="navMenu">
+                <ul>
+                    <li>
+                        <a href="#">About me</a>
+                    </li>
+                    <li>
+                        <a href="#">Speaker &amp; Writer</a>
+                    </li>
+                    <li>
+                        <a href="#">Work</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+
+<script>
+    let burger = document.getElementById('navTrigger'),
+    nav    = document.getElementById('navMenu');
+
+burger.addEventListener('click', function(e){
+  this.classList.toggle('active');
+  nav.classList.toggle('active');
+});
+</script>
+
+</html>
